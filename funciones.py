@@ -12,7 +12,7 @@ import cv2
 import sys
 import glob
 
-#libreary of the visualization
+#librery of the visualization
 import matplotlib.pyplot as plt
 
 
@@ -631,7 +631,6 @@ def trainTPU(path_model, epochs, model_Name, model_):
     TIME = tm.time() - start_time
     print("Time "+model_name+" = %s [seconds]" % TIME)
   
-## GBRAS-Net architecture
  
 """## 30 SRM filters for preprocessing and the activation function"""
 
@@ -670,6 +669,8 @@ def Fun(x):
     fun = tf.keras.activations.hard_sigmoid(x)*3
     return fun
 
+#  Strategy function 
+
 def squeeze_excitation_layer(input_layer, out_dim, ratio, conv):
   squeeze = tf.keras.layers.GlobalAveragePooling2D()(input_layer)
   excitation = tf.keras.layers.Dense(units=out_dim / ratio, activation='relu')(squeeze)
@@ -689,7 +690,7 @@ def squeeze_excitation_layer(input_layer, out_dim, ratio, conv):
 ##_________________________________________________________________________________________________________________________________________________________________________________________________________________________
 ##_________________________________________________________________________________________________________________________________________________________________________________________________________________________
 ##_________________________________________________________________________________________________________________________________________________________________________________________________________________________
-##________________________________________________________________________________________Estrategy Final____________________________________________________________________________
+##________________________________________________________________________________________Models____________________________________________________________________________
 
 
 def gbrasnet_estretegia_final_paper():
