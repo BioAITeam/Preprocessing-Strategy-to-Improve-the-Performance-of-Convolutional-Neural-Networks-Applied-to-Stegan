@@ -12,7 +12,7 @@ the accuracy of CNNs applied to steganalysis by 2%-15% while preserving the stab
 ## Folders
 - **training with TL** this folder contains the codes required to perform the training with transfer learning and multispectral images (15 channels), which contains the python file (code_15channels_with_weights.py) in which the experiments will be run and the file (models_classification2.py) that will contain the models, to be called by the main code.
 
-- **training without TL** this folder contains the codes required to perform the training without transfer learning with multispectral images (15 channels), which contains the python file (code_15channels_without_weights.py ) in which the experiments will be run and the file (models_classification5.py) that will contain the models, to be called by the main code.
+- **SRM_Kernels1.npy** This file contains the weights of the 30 SRM high-pass filters used for model training.
 
 
 ## Requirements
