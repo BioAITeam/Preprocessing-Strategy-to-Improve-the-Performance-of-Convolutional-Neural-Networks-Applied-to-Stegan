@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
-#libreria necesarias para cargar los datos y hacer uso de estos.
+#libraries
+
 import numpy as np
 from scipy import misc, ndimage, signal
 import time
@@ -13,11 +14,8 @@ import cv2
 import sys
 import glob
 
-#libreria para Visualizar datos
 import matplotlib.pyplot as plt
 
-
-#libreria para diseñar los Modelos de deep learning
 from tensorflow.keras.layers import Concatenate, Lambda
 from tensorflow.keras import backend
 from tensorflow.keras.layers import Lambda, Layer
@@ -35,7 +33,6 @@ from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.models import load_model
 
-# Libreria para obtener metricas
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import f1_score
@@ -48,41 +45,33 @@ from sklearn.metrics import log_loss
 from sklearn.metrics import zero_one_loss
 from sklearn.metrics import matthews_corrcoef
 
-# libreria para realizar pre procesamientos
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.preprocessing import StandardScaler
 
-## libreria para binarizar datos
 from sklearn.preprocessing import label_binarize
 
-# libreria para partir los datos en entrenamiento y test
 from sklearn.model_selection import train_test_split
 
-# librerias para K-folds
 from sklearn.model_selection import KFold
 from sklearn.model_selection import StratifiedKFold
 
-# graficar modelo creado
 from tensorflow.keras.utils import plot_model
 
-# tiempo
 import datetime
 
-#segmentar
 from scipy import misc
 from scipy import ndimage
 import copy
 
-#funciones para resumir codigo
 from funciones import *
 
 
 
 print("_______________________________________________________________________________________________________________________________________")
-print("_______________________________________________gbrasnet_estretegia_final_Wow___________________________________________")
+print("_______________________________________________GbrasNet-Strategy -- WOW 0.4bpp___________________________________________")
 print("_______________________________________________________________________________________________________________________________________")
 
-## Cargar bases de datos
+## Load dataset
 
 X_train = np.load('/home/rtabares/experimentos_jp/0.4_bpp/Wow/X_train.npy')
 y_train = np.load('/home/rtabares/experimentos_jp/0.4_bpp/Wow/y_train.npy')
@@ -101,11 +90,11 @@ print("datos de test: ", X_test.shape)
 print("etiquetas de test: ", y_test.shape)
 
 
-model = gbrasnet_estretegia_final_paper_DCT_Recortados()
+model = gbrasnet_estretegia_final_paper()
 model.summary()
 
 
-# carpetas para guardar modelos
+# Paths
 
 path_model = "/home/rtabares/experimentos_jp/FINAL/"
 model_Name = "gbrasnet_Wow_04_estretegia_final_paper_DCT_Recortados"
@@ -114,4 +103,4 @@ model_Name = "gbrasnet_Wow_04_estretegia_final_paper_DCT_Recortados"
 
 ### Train
 
-train_f(model, X_train, y_train, X_valid, y_valid, X_test, y_test, 32, 500, path_model, model_Name)
+train_f(model, X_train, y_train, X_valid, y_valid, X_test, y_test, 32, 400, path_model, model_Name)
