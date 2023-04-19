@@ -16,8 +16,9 @@ the accuracy of CNNs applied to steganalysis by 2%-15% while preserving the stab
 
 - **funciones.py** This file will contain the necessary libraries for the proper functioning of the training, strategy, and prediction functions, for the different models used in the research.
 
-- **SRM_Kernels1.npy** This file contains the weights of the 30 SRM high-pass filters used for model training.
+- **SRM_Kernels1.npy** This file contains the method used to perform K-Folds, and obtain a more reliable training result.
 
+- **K-Folds.py** 
 
 ## Requirements
 This repository requires the following libraries and frameworks:
