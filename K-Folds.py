@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-#libreria necesarias para cargar los datos y hacer uso de estos.
+#Libraries necessary to load data and use it
 import numpy as np
 from scipy import misc, ndimage, signal
 import time
@@ -13,11 +13,11 @@ import cv2
 import sys
 import glob
 
-#libreria para Visualizar datos
+#Library to visualize data
 import matplotlib.pyplot as plt
 
 
-#libreria para dise�ar los Modelos de deep learning
+#Library to design deep learning models
 from tensorflow.keras.layers import Concatenate, Lambda
 from tensorflow.keras import backend
 from tensorflow.keras.layers import Lambda, Layer
@@ -36,7 +36,7 @@ from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.models import load_model
 from tensorflow.keras.utils import to_categorical
 
-# Libreria para obtener metricas
+# Library to obtain metrics
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import f1_score
@@ -54,10 +54,10 @@ from sklearn.metrics import recall_score
 from sklearn.metrics import precision_score
 
 
-### binarizar variables categoricas
+### Binary encoding of categorical variables
 from sklearn.preprocessing import LabelBinarizer
 
-# libreria para realizar pre procesamientos
+# Library to perform preprocessing
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.preprocessing import StandardScaler
 
