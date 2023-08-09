@@ -28,7 +28,6 @@ This repository requires the following libraries and frameworks:
 - numPy 
 - OpenCV 
 - Matplotlib
-- Time
 - os
 - scikit-image
 - glob
